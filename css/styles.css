@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&subset=latin-ext");
+
 body {
+  font-family: "VT323", monospace;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,7 +16,7 @@ main {
   width: 660px;
   height: 220px;
   z-index: 99;
-  border: 6px solid black;
+  border: 6px solid #5060ad;
   border-radius: 8px;
 }
 
@@ -96,45 +99,54 @@ button {
 
 h1 {
   margin: 40px 0 0;
+  font-size: 60px;
+  color: #e44654;
 }
 
-.totalPoints {
+/* .totalPoints {
   right: 0;
-}
+} */
 
 .totalPoints h2 {
   font-size: 30px;
   font-weight: bold;
-  color: #555;
+  color: #5060ad;
   margin-bottom: 15px;
 }
 
-.totalPoints h2:after {
+/* .totalPoints h2:after {
   content: ":";
-}
+} */
 
-.totalPoints b {
+/* .totalPoints b {
   font-size: 20px;
   color: #e2311a;
-}
+} */
 
 .totalPoints li {
   margin: 5px 20px 0;
-  color: #666;
+  color: #5060ad;
 }
 
 .totalPoints li:before {
   content: "+ ";
-  color: #e2311a;
+  color: #5060ad;
 }
 
 .totalPoints strong {
-  font-size: 30px;
-  display: block;
+  color: #e44654;
+  font-size: 60px;
   margin-top: 6px;
 }
 
 ol,
 ul {
   list-style: none;
+}
+
+.click-btn {
+  font-size: 20px;
+  border: 2px solid black;
+  background-color: #e44654;
+  border-radius: 6px;
 }
