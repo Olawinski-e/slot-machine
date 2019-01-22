@@ -19,6 +19,10 @@
 //   selectNumber();
 // });
 
+var bet = 2;
+var credits = 200;
+var gain = 10;
+
 // -----------------------------------------------------------------------
 
 var selectNumber = [
@@ -39,11 +43,14 @@ function updateImage(array) {
   $(".middle").attr("src", array[numero2].src);
   $(".right").attr("src", array[numero3].src);
 
+  var jeanmichel = document.querySelector(".totalPoints strong");
   if (numero1 === numero2 && numero2 === numero3) {
-    console.log("You Win!");
+    credits += gain;
+    console.log("You Win!" + credits);
   } else {
-    console.log("You big loser!");
+    console.log("You big loser!" + credits);
   }
+  jeanmichel.innerHTML = credits;
 }
 
 // ------------------------------------------------------------
@@ -53,23 +60,8 @@ updateImage(selectNumber);
 // ------------------------------------------------------------
 
 $(".click-btn").click(function() {
+  credits -= bet;
   updateImage(selectNumber);
 });
 
 // -----------------------------------------------------------------------
-
-// function equalNumbers() {
-//   var left = $(".left").hasClass("one");
-//   var middle = $(".middle").hasClass("one");
-//   var right = $(".right").hasClass("one");
-
-//   if ((left === middle) === right) {
-//   } else if (isPaper) {
-//   } else {
-//   }
-
-//   // show the game over screen
-//   $(".game-end").addClass("showing");
-// }
-
-// console.log(numberOne(selectNumber));
