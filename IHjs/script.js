@@ -33,8 +33,8 @@ var isGenius = "GeniusOfEvil";
 var selectNumber = [
   { extras: false, src: "./IHimages/image-three.jpg", value: "one" },
   { extras: false, src: "./IHimages/image-five.jpg", value: "two" },
-  { extras: true, src: "./IHimages/image-ten.jpg", value: "ten" },
   { extras: true, src: "./IHimages/image-seven.jpg", value: "three" },
+  { extras: true, src: "./IHimages/image-ten.jpg", value: "ten" },
   { extras: false, src: "./IHimages/image-four.jpg", value: "four" },
   { extras: true, src: "./IHimages/image-nine.jpg", value: "nine" },
   { extras: true, src: "./IHimages/image-one.jpg", value: "five" },
