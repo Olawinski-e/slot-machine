@@ -20,7 +20,7 @@
 // });
 
 var bet = 2;
-var credits = 200;
+var credits = 10;
 var gain = 30;
 var extraGain = 50;
 var jackpot = ["012", "021", "120", "102", "201", "210"];
@@ -52,6 +52,7 @@ function updateImage(array) {
   if (numero1 === numero2 && numero2 === numero3) {
     credits += gain;
     console.log("Just luck! " + credits);
+
     alert("You're Lucky!");
   }
   if (jackpot.indexOf(isJackpot) !== -1) {
@@ -72,7 +73,12 @@ updateImage(selectNumber);
 
 $(".click-btn").click(function() {
   var nextAmount = credits - bet;
-  if (nextAmount >= 0) {
+  console.log(nextAmount);
+  if (nextAmount <= 0) {
+    credits = nextAmount;
+    updateImage(selectNumber);
+    $(".game-end").addClass("showing");
+  } else {
     credits = nextAmount;
     updateImage(selectNumber);
   }
@@ -81,10 +87,10 @@ $(".click-btn").click(function() {
 
 // -----------------------------------------------------------------------
 
-$(".game-end button").click(function() {
-  $(".game-end").removeClass("showing");
-  $(".container").removeClass("left middle right");
-});
+// $(".game-end button").click(function() {
+//   $(".game-end").removeClass("showing");
+//   $(".container").removeClass("left middle right");
+// });
 
 // -----------------------------------------------------------------------
 
