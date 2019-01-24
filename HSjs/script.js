@@ -29,13 +29,13 @@ var isJackpot = "Hide & Seek";
 // -----------------------------------------------------------------------
 
 var selectNumber = [
-  { extras: false, src: "./images/image-three.jpg", value: "one" },
-  { extras: false, src: "./images/image-five.jpg", value: "two" },
-  { extras: true, src: "./images/image-seven.jpg", value: "three" },
-  { extras: false, src: "./images/image-four.jpg", value: "four" },
-  { extras: true, src: "./images/image-one.jpg", value: "five" },
-  { extras: false, src: "./images/image-six.jpg", value: "six" },
-  { extras: true, src: "./images/image-two.jpg", value: "seven" }
+  { extras: false, src: "./HSimages/image-three.jpg", value: "one" },
+  { extras: false, src: "./HSimages/image-five.jpg", value: "two" },
+  { extras: true, src: "./HSimages/image-seven.jpg", value: "three" },
+  { extras: false, src: "./HSimages/image-four.jpg", value: "four" },
+  { extras: true, src: "./HSimages/image-one.jpg", value: "five" },
+  { extras: false, src: "./HSimages/image-six.jpg", value: "six" },
+  { extras: true, src: "./HSimages/image-two.jpg", value: "seven" }
 ];
 
 function updateImage(array) {

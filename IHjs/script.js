@@ -31,17 +31,17 @@ var isGenius = "GeniusOfEvil";
 // -----------------------------------------------------------------------
 
 var selectNumber = [
-  { extras: false, src: "./images/image-three.jpg", value: "one" },
-  { extras: false, src: "./images/image-five.jpg", value: "two" },
-  { extras: true, src: "./images/image-ten.jpg", value: "ten" },
-  { extras: true, src: "./images/image-seven.jpg", value: "three" },
-  { extras: false, src: "./images/image-four.jpg", value: "four" },
-  { extras: true, src: "./images/image-nine.jpg", value: "nine" },
-  { extras: true, src: "./images/image-one.jpg", value: "five" },
-  { extras: false, src: "./images/image-six.jpg", value: "six" },
-  { extras: true, src: "./images/image-eleven.jpg", value: "eleven" },
-  { extras: true, src: "./images/image-two.jpg", value: "seven" },
-  { extras: true, src: "./images/image-eight.jpg", value: "eight" }
+  { extras: false, src: "./IHimages/image-three.jpg", value: "one" },
+  { extras: false, src: "./IHimages/image-five.jpg", value: "two" },
+  { extras: true, src: "./IHimages/image-ten.jpg", value: "ten" },
+  { extras: true, src: "./IHimages/image-seven.jpg", value: "three" },
+  { extras: false, src: "./IHimages/image-four.jpg", value: "four" },
+  { extras: true, src: "./IHimages/image-nine.jpg", value: "nine" },
+  { extras: true, src: "./IHimages/image-one.jpg", value: "five" },
+  { extras: false, src: "./IHimages/image-six.jpg", value: "six" },
+  { extras: true, src: "./IHimages/image-eleven.jpg", value: "eleven" },
+  { extras: true, src: "./IHimages/image-two.jpg", value: "seven" },
+  { extras: true, src: "./IHimages/image-eight.jpg", value: "eight" }
 ];
 
 function updateImage(array) {
