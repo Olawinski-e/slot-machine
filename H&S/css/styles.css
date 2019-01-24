@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans");
+
+body {
+  background-image: url("../images/fond.jpg");
+  font-family: "Merriweather Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 660px;
+  height: 220px;
+  z-index: 99;
+  border: 3px solid white;
+  border-radius: 8px;
+}
+
+/* .one {
+  background-image: url(../images/image-one.jpg);
+  background-repeat: no-repeat;
+}
+
+.two {
+  background-image: url(../images/image-two.jpg);
+  background-repeat: no-repeat;
+}
+
+.three {
+  background-image: url(../images/image-three.jpg);
+  background-repeat: no-repeat;
+}
+
+.four {
+  background-image: url(../images/image-four.jpg);
+  background-repeat: no-repeat;
+}
+
+.five {
+  background-image: url(../images/image-five.jpg);
+  background-repeat: no-repeat;
+}
+
+.six {
+  background-image: url(../images/image-six.jpg);
+  background-repeat: no-repeat;
+}
+
+.seven {
+  background-image: url(../images/image-seven.jpg);
+  background-repeat: no-repeat;
+} */
+
+.numbers {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.container {
+  margin-top: 32px;
+  color: white;
+  background-color: #302727;
+}
+
+.square {
+  height: 200px;
+}
+
+.left {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  border-radius: 6px;
+}
+
+.middle {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  border-radius: 6px;
+}
+
+.right {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 32px;
+}
+
+h1 {
+  margin: 32px 0 0;
+  font-size: 60px;
+  color: white;
+}
+
+.totalPoints {
+  margin: 32px;
+  display: inline-flex;
+  border: 3px solid white;
+  border-radius: 8px;
+  background-color: #2e2626;
+}
+
+.totalPoints h2 {
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+  display: initial;
+}
+
+.totalPoints li {
+  margin: 5px 20px 0;
+  color: white;
+}
+
+.totalPoints li:before {
+  content: "- ";
+  color: white;
+}
+
+.totalPoints strong {
+  color: white;
+  font-size: 60px;
+  margin-top: 6px;
+}
+
+.totalPoints ul {
+  padding-left: 0;
+  padding-top: 18px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.click-btn {
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  background-color: #302727;
+  height: 50px;
+  width: 140px;
+}
+
+.square:hover img {
+  -webkit-transform: scale(-1); /* Safari and Chrome */
+  -moz-transform: scale(-1); /* Firefox */
+  -ms-transform: scale(-1); /* IE 9 */
+  -o-transform: scale(-1); /* Opera */
+  transform: scale(-1);
+}
