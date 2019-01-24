@@ -21,28 +21,37 @@
 
 var bet = 2;
 var credits = 300;
-var gain = 40;
-var extraGain = 50;
+var gain = 70;
+var extraGain = 100;
 var jackpot = ["012", "021", "120", "102", "201", "210"];
 var isJackpot = "Hide & Seek";
-var geniusPrice = ["1811", "1118", "8111", "1181", "1118"];
-var isGenius = "GeniusOfEvil";
+var genius = ["345", "354", "453", "435", "543", "534"];
+var isGenius = "Genius Of Evil";
 
 // -----------------------------------------------------------------------
 
 var selectNumber = [
-  { extras: false, src: "./IHimages/image-three.jpg", value: "one" },
-  { extras: false, src: "./IHimages/image-five.jpg", value: "two" },
-  { extras: true, src: "./IHimages/image-seven.jpg", value: "three" },
-  { extras: true, src: "./IHimages/image-ten.jpg", value: "ten" },
-  { extras: false, src: "./IHimages/image-four.jpg", value: "four" },
-  { extras: true, src: "./IHimages/image-nine.jpg", value: "nine" },
-  { extras: true, src: "./IHimages/image-one.jpg", value: "five" },
-  { extras: false, src: "./IHimages/image-six.jpg", value: "six" },
-  { extras: true, src: "./IHimages/image-eleven.jpg", value: "eleven" },
-  { extras: true, src: "./IHimages/image-two.jpg", value: "seven" },
-  { extras: true, src: "./IHimages/image-eight.jpg", value: "eight" }
+  { src: "./IHimages/image-three.jpg", value: "one" },
+  { src: "./IHimages/image-five.jpg", value: "two" },
+  { src: "./IHimages/image-seven.jpg", value: "three" },
+  { src: "./IHimages/image-one.jpg", value: "five" },
+  { src: "./IHimages/image-nine.jpg", value: "nine" },
+  { src: "./IHimages/image-two.jpg", value: "seven" },
+  { src: "./IHimages/image-ten.jpg", value: "ten" },
+  { src: "./IHimages/image-four.jpg", value: "four" },
+  { src: "./IHimages/image-six.jpg", value: "six" },
+  { src: "./IHimages/image-eleven.jpg", value: "eleven" },
+  { src: "./IHimages/image-eight.jpg", value: "eight" }
 ];
+
+// function test() {
+//   credits = 400;
+//   for (i = 0; i < 200; i++) {
+//     updateImage(selectNumber);
+//   }
+// }
+
+// test();
 
 function updateImage(array) {
   numero1 = Math.floor(Math.random() * array.length);
@@ -53,6 +62,7 @@ function updateImage(array) {
   $(".right").attr("src", array[numero3].src);
 
   isJackpot = numero1.toString() + numero2.toString() + numero3.toString();
+  isGenius = numero1.toString() + numero2.toString() + numero3.toString();
 
   var stillPoints = document.querySelector(".totalPoints strong");
   if (numero1 === numero2 && numero2 === numero3) {
@@ -65,9 +75,9 @@ function updateImage(array) {
     console.log("JACKPOT MY FRIIIEND" + credits);
     alert("SPECIAL BEST TEAM COMBINATION");
   }
-  if (geniusPrice.indexOf(isGenius) !== -1) {
+  if (genius.indexOf(isGenius) !== -1) {
     credits += extraGain;
-    console.log("SPECIAL EVIL GENIUS PRICE!" + credits);
+    console.log("THEY'RE GONNA END THE WORLD!" + credits);
     alert("SPECIAL EVIL GENIUS COMBINATION!");
   } else {
     console.log("You loose, loser! " + credits);
