@@ -68,17 +68,29 @@ function updateImage(array) {
   if (numero1 === numero2 && numero2 === numero3) {
     credits += gain;
     console.log("Just luck! " + credits);
-    alert("You're Lucky!");
+    $(".jackpot-popup").addClass("showing");
+
+    $(".jackpot-popup button").click(function() {
+      $(".jackpot-popup").removeClass("showing");
+    });
   }
   if (jackpot.indexOf(isJackpot) !== -1) {
     credits += extraGain;
-    console.log("JACKPOT MY FRIIIEND" + credits);
-    alert("SPECIAL BEST TEAM COMBINATION");
+    $(".specialGainTeam-popup").addClass("showing");
+
+    $(".specialGainTeam-popup button").click(function() {
+      $(".specialGainTeam-popup").removeClass("showing");
+    });
+    console.log("BEST TEAM EVER" + credits);
   }
   if (genius.indexOf(isGenius) !== -1) {
     credits += extraGain;
-    console.log("THEY'RE GONNA END THE WORLD!" + credits);
-    alert("SPECIAL EVIL GENIUS COMBINATION!");
+    $(".specialGainGenius-popup").addClass("showing");
+
+    $(".specialGainGenius-popup button").click(function() {
+      $(".specialGainGenius-popup").removeClass("showing");
+    });
+    console.log("EVIL GENIUS" + credits);
   } else {
     console.log("You loose, loser! " + credits);
   }
@@ -93,7 +105,12 @@ updateImage(selectNumber);
 
 $(".click-btn").click(function() {
   var nextAmount = credits - bet;
-  if (nextAmount >= 0) {
+  console.log(nextAmount);
+  if (nextAmount <= 0) {
+    credits = nextAmount;
+    updateImage(selectNumber);
+    $(".game-end").addClass("showing");
+  } else {
     credits = nextAmount;
     updateImage(selectNumber);
   }
@@ -104,6 +121,7 @@ $(".click-btn").click(function() {
 
 $(".game-end button").click(function() {
   $(".game-end").removeClass("showing");
+  $(".stronger").replaceWith(300);
   $(".container").removeClass("left middle right");
 });
 

@@ -20,7 +20,7 @@
 // });
 
 var bet = 2;
-var credits = 10;
+var credits = 300;
 var gain = 30;
 var extraGain = 50;
 var jackpot = ["012", "021", "120", "102", "201", "210"];
@@ -52,13 +52,20 @@ function updateImage(array) {
   if (numero1 === numero2 && numero2 === numero3) {
     credits += gain;
     console.log("Just luck! " + credits);
+    $(".jackpot-popup").addClass("showing");
 
-    alert("You're Lucky!");
+    $(".jackpot-popup button").click(function() {
+      $(".jackpot-popup").removeClass("showing");
+    });
   }
   if (jackpot.indexOf(isJackpot) !== -1) {
     credits += extraGain;
-    console.log("JACKPOT MY FRIIIEND" + credits);
-    alert("Special combination!");
+    $(".specialGain-popup").addClass("showing");
+
+    $(".specialGain-popup button").click(function() {
+      $(".specialGain-popup").removeClass("showing");
+    });
+    console.log("YOU DID IT MY FRIIIEND" + credits);
   } else {
     console.log("You loose, loser! " + credits);
   }
@@ -85,12 +92,13 @@ $(".click-btn").click(function() {
   return;
 });
 
-// -----------------------------------------------------------------------
+// ------------------------------------------------------------------------
 
-// $(".game-end button").click(function() {
-//   $(".game-end").removeClass("showing");
-//   $(".container").removeClass("left middle right");
-// });
+$(".game-end button").click(function() {
+  $(".game-end").removeClass("showing");
+  $(".stronger").replaceWith(300);
+  $(".container").removeClass("left middle right");
+});
 
 // -----------------------------------------------------------------------
 
